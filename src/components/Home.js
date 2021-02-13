@@ -3,8 +3,8 @@ import app from "./base.js";
 
 function Home() {
     return (
-        <div>
-            HOME PAGE
+        <div className="content">
+            <p>HOME PAGE</p>
             <button onClick={()=>app.auth().signOut()}>Sign Out</button>
         </div>
     )
