@@ -44,13 +44,11 @@ var uiConfig = {
     signInFlow: "popup",
     signInOptions: [
       firebase.auth.EmailAuthProvider.PROVIDER_ID,
-      // firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+    //   firebase.auth.GoogleAuthProvider.PROVIDER_ID,
     ],
-    signInSuccessUrl: "/signup",
     callbacks: {
       signInSuccessWithAuthResult: async (authResult) => {
         const userInfo = authResult.additionalUserInfo;
-        console.log("Hi world");
         if (userInfo.isNewUser && userInfo.providerId === "password") {
           try {
             await authResult.user.sendEmailVerification();
@@ -64,21 +62,11 @@ var uiConfig = {
     },
   };
 
-  const uiConfig2 = {
-    signInFlow: 'popup',
-    signInOptions: [
-      firebase.auth.EmailAuthProvider.EMAIL_PASSWORD_SIGN_IN_METHOD,
-    ]
-  };
-
-
 function Authentication() {
     return (
         <div>
             <div className="login__panel">
                 <StyleFirebaseAuth className="login" uiConfig={uiConfig} firebaseAuth={app.auth()} /> 
-                {/* <StyleFirebaseAuth uiConfig={uiConfig2} firebaseAuth={app.auth()} />  */}
-
             </div>
         </div>
     )
