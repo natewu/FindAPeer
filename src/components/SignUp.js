@@ -1,6 +1,31 @@
 import React, { useCallback } from "react";
 import { withRouter } from "react-router";
 import app from "./base";
+import firebase from "firebase";
+import StyleFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
+
+var uiConfig = {
+    signInFlow: "popup",
+    signInOptions: [
+      firebase.auth.EmailAuthProvider.PROVIDER_ID,
+      firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+    ],
+    callbacks: {
+      signInSuccessWithAuthResult: async (authResult) => {
+        const userInfo = authResult.additionalUserInfo;
+        if (userInfo.isNewUser && userInfo.providerId === "password") {
+          try {
+            await authResult.user.sendEmailVerification();
+            console.log("Check your email.");
+          } catch (e) {
+            console.log(e);
+          }
+        }
+        return false;
+      },
+    },
+  };
+
 
 const SignUp = ({ history }) => {
   const handleSignUp = useCallback(async event => {
@@ -18,7 +43,8 @@ const SignUp = ({ history }) => {
 
   return (
     <div>
-      <h1>Sign up</h1>
+      <h1>Sign up</h1>s
+      <StyleFirebaseAuth uiConfig={uiConfig} firebaseAuth={app.auth()} />
       <form onSubmit={handleSignUp}>
         <label>
           Email
