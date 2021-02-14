@@ -5,34 +5,33 @@ import firebase from "firebase";
 import { withRouter } from "react-router";
 import  { Redirect } from 'react-router-dom'
 import { AuthContext } from "./Auth.js";
-import {Button} from "@material-ui/core"
+import {Button, TextField} from "@material-ui/core"
 
-const Login = ({ history }) => {  
-  const handleLogin = useCallback(
-     event => {
-      event.preventDefault();
-      const { email, password } = event.target.elements;
-      try {
-         app
-          .auth()
-          .signInWithEmailAndPassword(email.value, password.value);
-          
-          if (email.value != "" && password.value != ""){
-            history.push("/home");
-          }
-          // redirect here
-      } catch (error) {
-        alert(error);
-      }
-    },
-  );
+var incorrectMessage = ""
 
-  // ok so it still doesnt redirect to "/"
-  const {currentUser} = AuthContext;
-
-  if (currentUser) {
-    return <Redirect to="/" />;
-  }
+const Login = ({ history }) => {
+    const handleLogin = useCallback(
+      async event => {
+        event.preventDefault();
+        const { email, password } = event.target.elements;
+        try {
+          await app
+            .auth()
+            .signInWithEmailAndPassword(email.value, password.value);
+          history.push("/");
+        } catch (error) {
+          alert(error);
+        // incorrectMessage="Incorrect Password!";
+        }
+      },
+      [history]
+    );
+  
+    const currentUser = useContext(AuthContext);
+  
+    if (currentUser) {
+      return <Redirect to="/" />;
+    }
 // time to do some UI magic
 // yes pls
   return (
@@ -41,13 +40,17 @@ const Login = ({ history }) => {
             
         </div>
         <div className="login" style={{zIndex:10}}>
-                <h1 style={{alignContent:"center"}}>Log in</h1>
+                <div style={{margin:"auto"}}>
+                    <h1 style={{alignContent:"center", paddingBottom:"10px"}}>Login</h1>
+                </div>
                 <form style={{display:"grid", gridTemplateRows:"1fr 1fr 1fr", width:"80%", margin:"0 auto"}}onSubmit={handleLogin}>
                     <label>
-                        <input name="email" type="email" placeholder="Email" />
+                    <TextField name="email" type="email" id="email" label="email" size="small" fullWidth variant="outlined"/>
+                        {/* <input name="email" type="email" placeholder="Email" /> */}
                     </label>
                     <label>
-                        <input name="password" type="password" placeholder="Password" />
+                        {/* <input name="password" type="password" placeholder="Password" /> */}
+                        <TextField name="password" type="password" id="password" label="Password" helperText={incorrectMessage} size="small" fullWidth variant="outlined"/>
                     </label>
                     <Button variant="outlined" color="secondary" type="submit">Log in</Button>  
                 </form>

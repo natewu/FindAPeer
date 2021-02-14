@@ -9,36 +9,43 @@
     border-radius: 15px;
     box-shadow: 0 0 10px 5px rgb(0 0 0 / 20%);
     display:grid;
-    filter: blur(1px);
+    filter: blur(0.7px);
     grid-column: 2;
     grid-row: 2;
     grid-template-columns: 1fr;
     height: 30vh;
     margin: 0 auto;
     padding: 10px;
-    width: 100%;
+    width: 80%;
     
 }
 .login{
-    align-content: center;
-    align-items: center;
-    bottom:0;
     display:grid;
     grid-column: 2;
     grid-row: 2;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr fr;
+    grid-template-rows: 0.5fr 1fr;
     height: 30vh;
-    left:0;
     margin: 0 auto;
-    padding: 20px;
-    right:0;
-    top:0;
-    width: 80%;
+    width: 60%;
+}
+h1{
+    font-family: sans-serif;
+    font-weight: 300;
 }
 input{
     border:none;
     margin: 0 auto;
     padding: 8px;
     width: 100%;
+}
+textarea:focus, input:focus{
+    outline: none;
+}
+#password{
+    /* min-width: 100%; */
+    padding: 10 20px !important;
+}
+Button{
+    height: 50px;
 }
