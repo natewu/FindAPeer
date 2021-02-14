@@ -3,7 +3,7 @@ import "./Chat.css"
 import Posts from "./Posts";
 import {v4 as uuidv4} from 'uuid';
 export class Chat extends Component {
-
+    
     state = {
         username: "",
         text: "",
@@ -27,15 +27,16 @@ export class Chat extends Component {
     setUsername = (e) => {
         this.setState({username: e.target.value});
     }
-
+    
     render() {
         return (
             <div className="chat">
                 <h1 style={{gridRow:2}}>Chat</h1>
                 <div id="chatBOX" style={{gridRow:3, overflowY:"scroll", overflowX: "hidden"}}>
                     {/* <Post post={this.post}/> */}
+                    <Posts username={andy} text={text}/>
                     {this.state.posts.map(posts =>(
-                        <Posts username={posts.username} text={posts.text}/>
+                        <Posts username={username} text={posts.text}/>
                     ))}
                 </div>
                 <form onSubmit={this.onSubmit} style={{display:"flex",gridRow:4, width:"90%", margin:"auto"}}>
@@ -47,5 +48,10 @@ export class Chat extends Component {
         )
     }
 }
-
+var andy = "https://cdn.discordapp.com/attachments/396871882139500564/810543746969108530/unknown.png"
+var username = "https://cdn.discordapp.com/attachments/807075592490057748/810565880081547264/unknown.png"
+var text = [
+    "hello",
+    "whats up"
+]
 export default Chat
