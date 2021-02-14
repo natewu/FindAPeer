@@ -1,37 +1,44 @@
 .wrapper__login{
     display:grid;
+    grid-template-columns: 1fr 0.8fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
 }
 .login__panel{
-    width: 30%;
-    margin: 0 auto;
-    backdrop-filter: blur(5px);
+    /* backdrop-filter: blur(5px); */
     background-color: rgba(255, 255, 255, 0.486);
-    height: 30vh;
-    grid-row: 2;
     border-radius: 15px;
-    padding: 10px;
+    box-shadow: 0 0 10px 5px rgb(0 0 0 / 20%);
     display:grid;
+    filter: blur(1px);
+    grid-column: 2;
+    grid-row: 2;
     grid-template-columns: 1fr;
+    height: 30vh;
+    margin: 0 auto;
+    padding: 10px;
+    width: 100%;
     
 }
 .login{
+    align-content: center;
+    align-items: center;
+    bottom:0;
+    display:grid;
+    grid-column: 2;
+    grid-row: 2;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr fr;
+    height: 30vh;
     left:0;
+    margin: 0 auto;
+    padding: 20px;
     right:0;
     top:0;
-    bottom:0;
-    margin: 0 auto;
-    position: absolute;
-    padding: 20px;
-    grid-column: 1;
-    display:grid;
-    grid-template-columns: 1fr;
-    /* grid-auto-rows: minmax (100px, 1fr) */
-    grid-template-rows: 1fr fr;
+    width: 80%;
 }
 input{
     border:none;
-    padding: 8px;
     margin: 0 auto;
+    padding: 8px;
     width: 100%;
 }

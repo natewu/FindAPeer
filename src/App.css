@@ -4,7 +4,19 @@
 }
 .wrapper{
   background: linear-gradient(315deg, #c06c84, #6C5B7B);
+  position: relative;
   height:100vh;
   font-family: 'Ubuntu', sans-serif;
-
+  overflow: hidden;
+  
+}
+.wrapper::before{
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-image: url("./images/background.png");
+  background-repeat: no-repeat;
+  background-size:cover;
+  filter:blur(5px)
 }
