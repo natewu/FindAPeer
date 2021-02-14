@@ -50,9 +50,9 @@
 }
 
 /* to prevent background overlapping our theme */
-.wrapper::before{
+/* .wrapper::before{
 content: normal;
-}
+} */
 .sv-header__text{
     color: #F67280;
 }
@@ -60,7 +60,7 @@ content: normal;
     border-bottom: 1px solid #F67280;
 }
 input, select, textarea{
-    color: #F8B195 !important;
+    color: #F67280 !important;
 }
 .sv-footer__next-btn, .sv-footer__prev-btn, .sv-footer__complete-btn{
     background-color: #F67280 !important;
