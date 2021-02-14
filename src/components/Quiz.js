@@ -1,4 +1,4 @@
-  
+import "./Quiz.css"
 import React, { useState } from 'react';
 import * as Survey from "survey-react";
 import "survey-react/survey.css";
@@ -103,7 +103,7 @@ const quiz = () =>{
 var json = {
 	"title": "Tell us a little bit about yourself!",
     "description": "Please take look at the survey title and logo. ",
-    "logo": "https://surveyjs.io/favicon.ico",
+    // "logo": "https://surveyjs.io/favicon.ico",
     "logoWidth": 60,
     "logoHeight": 60,
 	questions: [
@@ -134,7 +134,11 @@ function onComplete(survey, options) {
 	//You may create survey model outside the render function and use it in your App or component
 	//The most model properties are reactive, on their change the component will change UI when needed.
 	var model = new Survey.Model(json);
-	return (<Survey.Survey model={model} onComplete={onComplete} class="survey"/>);
+	return (
+		<div className="Survey">
+			<Survey.Survey model={model} onComplete={onComplete} class="survey"/>
+		</div>
+	);
 }
 export default quiz;
 	/*
