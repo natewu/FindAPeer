@@ -4,7 +4,7 @@ import { AuthContext } from "../Auth";
 
 
 const PrivateRoute = ({ component: RouteComponent, ...rest }) => {
-  const {currentUser} = AuthContext  // see it works here
+  const currentUser = firebase.auth().currentUser;
   return (
     <Route
       {...rest}

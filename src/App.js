@@ -7,7 +7,9 @@ import Login from "./components/Authentication.js";
 import SignUp from "./components/SignUp.js";
 import Quiz from "./components/Quiz.js";
 
-function App() {
+function App(userState) {
+  const userID = userState;
+  console.log("User: " + userID)
   return (
     <div className="App">
       <Router>
@@ -21,5 +23,7 @@ function App() {
     </div>
   );
 }
+
+
 
 export default App;
