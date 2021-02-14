@@ -1,4 +1,4 @@
-#         ![Logo](https://github.com/ryanjacquess/Cliptionary/blob/main/icon1.png)
+#         ![Logo](https://github.com/natewu/CalgaryHacks/blob/master/Logo.jpg)
 
 The recent Covid-19 pandemic has had significant psychological and social effects on the population. Research has highlighted the impact on psychological well-being of the most exposed groups, including children, college students, and health workers, who are more likely to develop post-traumatic stress disorder, anxiety, depression, and other symptoms of distress.The social distance and the security measures have affected the relationship among people and their perception of empathy toward others.
 
