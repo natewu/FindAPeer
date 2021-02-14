@@ -23,7 +23,7 @@ const Login = ({ history }) => {
                 // ...
               });
               console.log(user);
-          history.push("/home");
+          history.push("/quiz");
         } catch (error) {
           alert(error);
         // incorrectMessage="Incorrect Password!";
