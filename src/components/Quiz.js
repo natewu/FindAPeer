@@ -89,7 +89,7 @@ var json = {
 		{
 			type: "radiogroup",
 			name: "openness",
-			title: "How Open are you?",
+			title: "How outgoing would you say you are?",
 			isRequired: true,
 			choices: [
 				AllOpenness[0],
@@ -105,7 +105,7 @@ var json = {
 		{
 			type: "radiogroup",
 			name: "Concient",
-			title: "How Open are you?",
+			title: "Which of the following best describes you?",
 			isRequired: true,
 			choices: [
 				AllConcient[0],
@@ -121,7 +121,7 @@ var json = {
 	{
 		type: "radiogroup",
 		name: "Concient",
-		title: "How Open are you?",
+		title: "Out of all these statements, choose the one you most agree with.",
 		isRequired: true,
 		choices: [
 			AllAgree[0],
@@ -137,17 +137,33 @@ var json = {
 	{
 		type: "radiogroup",
 		name: "Concient",
-		title: "How outgoing would you say you are?",
+		title: "Which of the following best describes you?",
 		isRequired: true,
 		choices: [
-			AllExtro[0],
-			AllExtro[1],
-			AllExtro[2],
-			AllExtro[3],
-			AllExtro[4]
+			AllNuero[0],
+			AllNuero[1],
+			AllNuero[2],
+			AllNuero[3],
+			AllNuero[4]
 		]
 	}]
 	},
+	{
+		questions: [
+		{
+			type: "radiogroup",
+			name: "Concient",
+			title: "How outgoing would you say you are?",
+			isRequired: true,
+			choices: [
+				AllExtro[0],
+				AllExtro[1],
+				AllExtro[2],
+				AllExtro[3],
+				AllExtro[4]
+			]
+		}]
+		},
 	{ 
 		questions: [
 			{
