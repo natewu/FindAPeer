@@ -31,7 +31,7 @@ function Home() {
                 <div className="Details">
                     <h1 style={{gridRow:1}}>Pandy Zhou</h1>
                     <div style={{gridRow:2}}>
-                        <h2 >Age: 9</h2>
+                        <h2 >Age: 18</h2>
                         <h3>Personality: Extrovert</h3>
                         <h3>Major: Reproductive Systems Engineer</h3>
                     </div>
