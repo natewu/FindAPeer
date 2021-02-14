@@ -35,23 +35,24 @@ const Login = ({ history }) => {
   }
 // time to do some UI magic
 // yes pls
-return (
-<div className="wrapper__login">
-  <div className="login__panel">
-      <div className="login" style={{zIndex:10}}>
-          <h1 style={{alignContent:"center"}}>Log in</h1>
-          <form style={{display:"grid", gridTemplateRows:"1fr 1fr 1fr", width:"80%", margin:"0 auto"}}onSubmit={handleLogin}>
-              <label>
-                  <input name="email" type="email" placeholder="Email" />
-              </label>
-              <label>
-                  <input name="password" type="password" placeholder="Password" />
-              </label>
-              <Button variant="outlined" color="secondary" type="submit">Log in</Button>  
-          </form>
-      </div>
-  </div>
-</div>);
+  return (
+    <div className="wrapper__login">
+        <div className="login__panel">
+            <div className="login" style={{zIndex:10}}>
+                <h1 style={{alignContent:"center"}}>Log in</h1>
+                <form style={{display:"grid", gridTemplateRows:"1fr 1fr 1fr", width:"80%", margin:"0 auto"}}onSubmit={handleLogin}>
+                    <label>
+                        <input name="email" type="email" placeholder="Email" />
+                    </label>
+                    <label>
+                        <input name="password" type="password" placeholder="Password" />
+                    </label>
+                    <Button variant="outlined" color="secondary" type="submit">Log in</Button>  
+                </form>
+            </div>
+        </div>
+    </div>
+  );
 };
 
 export default withRouter(Login);
