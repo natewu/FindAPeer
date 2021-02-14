@@ -8,7 +8,7 @@ import { AuthContext } from "./Auth.js";
 import {Button, TextField} from "@material-ui/core"
 
 var incorrectMessage = ""
-
+var user;
 const Login = ({ history }) => {
     const handleLogin = useCallback(
       async event => {
@@ -17,7 +17,13 @@ const Login = ({ history }) => {
         try {
           await app
             .auth()
-            .signInWithEmailAndPassword(email.value, password.value);
+            .signInWithEmailAndPassword(email.value, password.value)
+            .then((userCredential) => {
+                // Signed in
+                user = userCredential.user;
+                // ...
+              });
+              console.log(user);
           history.push("/");
         } catch (error) {
           alert(error);
