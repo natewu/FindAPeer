@@ -13,6 +13,6 @@ const app =  firebase.initializeApp({
 });
 
 console.log(process.env.REACT_APP_FIREBASE_KEY);
-// export const auth = firebase.auth()
 
 export default app;
+export const auth = firebase.auth()
