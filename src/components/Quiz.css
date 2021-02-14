@@ -12,13 +12,13 @@ margin-right: 25%;
 }
 
 /* Submit button */
-.sv-footer__complete-btn {
+.sv-root-modern .sv-footer__complete-btn {
     text-align: center;
     font-size:25px;
 
 }
 /* prev button */
-.sv-footer__prev-btn {
+.sv-root-modern .sv-footer__prev-btn {
  margin-bottom:25px;
  text-align: center;
  font-size:16px
@@ -30,7 +30,7 @@ margin-right: 25%;
 }
 
 /* next button */
-.sv-footer__next-btn{
+.sv-root-modern .sv-footer__next-btn{
     text-align: center;
     font-size:16px
 }
