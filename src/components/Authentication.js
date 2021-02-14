@@ -7,25 +7,24 @@ import  { Redirect } from 'react-router-dom'
 import { AuthContext } from "./Auth.js";
 import {Button} from "@material-ui/core"
 
-const Login = ({ history }) => {
+const Login = ({ history }) => {  
   const handleLogin = useCallback(
-    async event => {
+     event => {
       event.preventDefault();
       const { email, password } = event.target.elements;
       try {
-        await app
+         app
           .auth()
           .signInWithEmailAndPassword(email.value, password.value);
           
-          // <Redirect to="./home"/>
+          if (email.value != "" && password.value != ""){
+            history.push("/home");
+          }
           // redirect here
-
       } catch (error) {
-        <Redirect to="/home"/>
         alert(error);
       }
     },
-    [history]
   );
 
   // ok so it still doesnt redirect to "/"

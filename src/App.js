@@ -5,21 +5,19 @@ import Home from "./components/Home";
 import PrivateRoute from "./components/routing/PrivateRoute"
 import Login from "./components/Authentication.js";
 import SignUp from "./components/SignUp.js";
-import { AuthProvider } from "./components/Auth";
+// import Questionare from "./Questionare.js";
 
 function App() {
   return (
     <div className="App">
-      <AuthProvider>
-        {/* <Header/> */}
-        <Router>
-          <div className="wrapper">
-            <PrivateRoute exact path="/" component={Home} />
-            <Route exact path="/login" component={Login}/>
-            <Route exact path="/signup" component={SignUp}/>
-          </div>
-        </Router>
-      </AuthProvider>
+      <Router>
+        <div className="wrapper">
+        <PrivateRoute exact path="/" component={Home} />
+        <Route exact path="/login" component={Login}/>
+        <Route exact path="/signup" component={SignUp}/>
+        {/* <Route exact path="/questionare" component={Questionare}/> */}
+        </div>
+      </Router>
     </div>
   );
 }
