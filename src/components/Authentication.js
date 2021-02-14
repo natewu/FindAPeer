@@ -51,12 +51,12 @@ const Login = ({ history }) => {
                 </div>
                 <form style={{display:"grid", gridTemplateRows:"1fr 1fr 1fr", width:"80%", margin:"0 auto"}}onSubmit={handleLogin}>
                     <label>
-                    <TextField name="email" type="email" id="email" label="email" size="small" fullWidth variant="outlined"/>
+                    <TextField name="email" type="email" id="email" label="email" color="secondary" size="small" fullWidth variant="outlined"/>
                         {/* <input name="email" type="email" placeholder="Email" /> */}
                     </label>
                     <label>
                         {/* <input name="password" type="password" placeholder="Password" /> */}
-                        <TextField name="password" type="password" id="password" label="Password" helperText={incorrectMessage} size="small" fullWidth variant="outlined"/>
+                        <TextField name="password" type="password" id="password" color="secondary" label="Password" helperText={incorrectMessage} size="small" fullWidth variant="outlined"/>
                     </label>
                     <Button variant="outlined" color="secondary" type="submit">Log in</Button>  
                 </form>

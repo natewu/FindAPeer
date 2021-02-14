@@ -1,8 +1,9 @@
 /* main css */
-.sv-root-modern {margin: 0;
+.sv-root-modern {
+    margin: 0;
     position:relative;
-margin-left: 25%;
-margin-right: 25%;
+    margin-left: 25%;
+    margin-right: 25%;
 
 }
 
@@ -25,6 +26,19 @@ margin-right: 25%;
 
 }
 
+.sv-root-modern{
+    background-color: rgba(240, 248, 255, 0.486);
+    height: 80vh;
+    width: 35vw;
+    margin: 10vh auto;
+    border-radius: 15px;
+    box-shadow: 0 0 5px 5px rgb(0 0 0 / 10%);
+}
+.sv-container-modern{
+    width: 80% !important;
+    margin: 0 auto !important;
+}
+
 .sv-item__control-label{
     color:antiquewhite;
 }
@@ -39,3 +53,19 @@ margin-right: 25%;
 .wrapper::before{
 content: normal;
 }
+.sv-header__text{
+    color: #F67280;
+}
+#sq_107i{
+    border-bottom: 1px solid #F67280;
+}
+input, select, textarea{
+    color: #F8B195 !important;
+}
+.sv-footer__next-btn, .sv-footer__prev-btn, .sv-footer__complete-btn{
+    background-color: #F67280 !important;
+    color:antiquewhite !important;
+}
+.sv-question__title--answer{
+    background-color: rgba(0, 0, 0, 0) !important;
+}   
