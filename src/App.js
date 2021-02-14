@@ -5,7 +5,7 @@ import Home from "./components/Home";
 import PrivateRoute from "./components/routing/PrivateRoute"
 import Login from "./components/Authentication.js";
 import SignUp from "./components/SignUp.js";
-// import Questionare from "./Questionare.js";
+import Quiz from "./Quiz.js";
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
         <PrivateRoute exact path="/" component={Home} />
         <Route exact path="/login" component={Login}/>
         <Route exact path="/signup" component={SignUp}/>
-        {/* <Route exact path="/questionare" component={Questionare}/> */}
+        <Route exact path="/quiz" component={Quiz}/>
         </div>
       </Router>
     </div>
