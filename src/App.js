@@ -5,7 +5,7 @@ import Home from "./components/Home";
 import PrivateRoute from "./components/routing/PrivateRoute"
 import Login from "./components/Authentication.js";
 import SignUp from "./components/SignUp.js";
-import Quiz from "./Quiz.js";
+import Quiz from "./components/Quiz.js";
 
 function App() {
   return (

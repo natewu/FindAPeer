@@ -35,8 +35,7 @@ var AllNuero = ["I tend to be moody",
             "I easily get anxious when things don't go my way",
             "I tend to be depressed if I am alone"];
 
-//This is where we are supposed to randomize them. Think of another way to validate them(no reptitions)
-
+// shuffle
 function shuffle(array) {
 	var currentIndex = array.length, temporaryValue, randomIndex;
   
@@ -55,7 +54,7 @@ function shuffle(array) {
   
 	return array;
   }
-
+  // shuffle them up
   AllOpenness = shuffle(AllOpenness);
   AllConcient = shuffle(AllConcient);
   AllExtro = shuffle(AllExtro);
@@ -98,9 +97,31 @@ const questions = {
 	]
 }
 const quiz = () =>{
+	Survey
+    .StylesManager
+    .applyTheme("bootstrap");
 var json = {
-	elements: [
-	 { type: "text", name: "customerName", title: "What is your name?", isRequired: true}
+	"title": "Tell us a little bit about yourself!",
+    "description": "Please take look at the survey title and logo. ",
+    "logo": "https://surveyjs.io/favicon.ico",
+    "logoWidth": 60,
+    "logoHeight": 60,
+	questions: [
+	 { 
+		type: "text", 
+	 	name: "customerName", 
+		title: "What is your name?", 
+		isRequired: true
+	 },
+	 {
+		name: "color",
+		type: "text",
+		inputType: "color",
+		title: "Your favorite color:"
+	},
+	{
+
+	}
 	]
    };
   
@@ -113,7 +134,7 @@ function onComplete(survey, options) {
 	//You may create survey model outside the render function and use it in your App or component
 	//The most model properties are reactive, on their change the component will change UI when needed.
 	var model = new Survey.Model(json);
-	return (<Survey.Survey model={model} onComplete={onComplete}/>);
+	return (<Survey.Survey model={model} onComplete={onComplete} class="survey"/>);
 }
 export default quiz;
 	/*
@@ -127,47 +148,4 @@ export default quiz;
 	// <Survey.Survey model={model}/>
 	// You may change model properties outside render function. 
 	//If needed react Survey Component will change its behavior and change UI.
-
-// export default function Quiz() {
-// 	const [currentQuestion, setCurrentQuestion] = useState(0);
-// 	const [showScore, setShowScore] = useState(false);
-// 	const [score, setScore] = useState(0);
-
-// 	const handleAnswerOptionClick = (isCorrect) => {
-// 		if (isCorrect) {
-// 			setScore(score + 1);
-// 		}
-
-// 		const nextQuestion = currentQuestion + 1;
-// 		if (nextQuestion < questions.length) {
-// 			setCurrentQuestion(nextQuestion);
-// 		} else {
-// 			setShowScore(true);
-// 		}
-// 	};
-// 	return (
-// 		<div className='app'>
-// 			{showScore ? (
-// 				<div className='score-section'>
-// 					You scored {score} out of {questions.length}
-// 				</div>
-// 			) : (
-// 				<>
-// 					<div className='question-section'>
-// 						<div className='question-count'>
-// 							<span>Question {currentQuestion + 1}</span>/{questions.length}
-// 						</div>
-// 						<div className='question-text'>{questions[currentQuestion].questionText}</div>
-// 					</div>
-// 					<div className='answer-section'>
-// 						{questions[currentQuestion].answerOptions.map((answerOption) => (
-// 							<button onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
-// 						))}
-// 					</div>
-// 				</>
-// 			)}
-// 		</div>
-// 	);
-// }
-
 
