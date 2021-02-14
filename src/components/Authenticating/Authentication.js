@@ -23,7 +23,7 @@ const Login = ({ history }) => {
                 // ...
               });
               console.log(user);
-          history.push("/home");
+          history.push("/");
         } catch (error) {
           alert(error);
         // incorrectMessage="Incorrect Password!";
@@ -32,8 +32,10 @@ const Login = ({ history }) => {
       [history]
     );
   
-// time to do some UI magic
-// yes pls
+//still redirects me to /login when i use quiz
+//i logged in with alistest@mail.com? im running rn lol ok ill restart it, can u see now still not working
+// cause ur not verified till u login, btw this server is not running, youre running something else
+// like the terminal doesnt show me npm start
   return (
     <div className="wrapper__login">
         <div className="login__panel">
