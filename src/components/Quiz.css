@@ -1,0 +1,41 @@
+/* main css */
+.sv-root-modern {margin: 0;
+    position:relative;
+margin-left: 25%;
+margin-right: 25%;
+
+}
+
+/* input boxes */
+.sv-root-modern input.sv-text{
+    text-align:center
+}
+
+/* Submit button */
+.sv-footer__complete-btn {
+    text-align: center;
+    font-size:25px;
+
+}
+/* prev button */
+.sv-footer__prev-btn {
+ margin-bottom:25px;
+ text-align: center;
+ font-size:16px
+
+}
+
+.sv-item__control-label{
+    color:antiquewhite;
+}
+
+/* next button */
+.sv-footer__next-btn{
+    text-align: center;
+    font-size:16px
+}
+
+/* to prevent background overlapping our theme */
+.wrapper::before{
+content: normal;
+}
