@@ -3,7 +3,7 @@
   height:100vh;
 }
 .wrapper{
-  background-color: rgb(33, 172, 252);
+  background: linear-gradient(315deg, #c06c84, #6C5B7B);
   height:100vh;
   font-family: 'Ubuntu', sans-serif;
 

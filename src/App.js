@@ -1,8 +1,9 @@
 import './App.css';
 import {BrowserRouter as Router, Switch, Route, Redirect} from "react-router-dom";
 import Home from "./components/Home";
+// import Header from "./components/Header.js"
 import PrivateRoute from "./components/routing/PrivateRoute"
-import {Authentication as Login} from "./components/Authentication.js";
+import Login from "./components/Authentication.js";
 import SignUp from "./components/SignUp.js";
 // import Questionare from "./Questionare.js";
 
