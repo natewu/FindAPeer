@@ -1,10 +1,11 @@
 import React, { useCallback } from "react";
 import { withRouter } from "react-router";
 import app from "./base";
-import firebase from "firebase";
-import StyleFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
+import "./SignUp.css"
+// import firebase from "firebase";
+// import StyleFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
 
-var uiConfig = {
+/* var uiConfig = {
     signInFlow: "popup",
     signInOptions: [
       firebase.auth.EmailAuthProvider.PROVIDER_ID,
@@ -25,7 +26,7 @@ var uiConfig = {
       },
     },
   };
-
+ */
 
 const SignUp = ({ history }) => {
   const handleSignUp = useCallback(async event => {
@@ -42,9 +43,9 @@ const SignUp = ({ history }) => {
   }, [history]);
 
   return (
-    <div>
-      <h1>Sign up</h1>s
-      <StyleFirebaseAuth uiConfig={uiConfig} firebaseAuth={app.auth()} />
+    <div className="Signup">
+      <h1>Sign up</h1>
+      {/* <StyleFirebaseAuth uiConfig={uiConfig} firebaseAuth={app.auth()} /> */}
       <form onSubmit={handleSignUp}>
         <label>
           Email
