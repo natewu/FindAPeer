@@ -1,6 +1,37 @@
+.wrapper__login{
+    display:grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
 .login__panel{
-
+    width: 30%;
+    margin: 0 auto;
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.486);
+    height: 30vh;
+    grid-row: 2;
+    border-radius: 15px;
+    padding: 10px;
+    display:grid;
+    grid-template-columns: 1fr;
+    
 }
 .login{
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
     margin: 0 auto;
+    position: absolute;
+    padding: 20px;
+    grid-column: 1;
+    display:grid;
+    grid-template-columns: 1fr;
+    /* grid-auto-rows: minmax (100px, 1fr) */
+    grid-template-rows: 1fr fr;
+}
+input{
+    border:none;
+    padding: 8px;
+    margin: 0 auto;
+    width: 100%;
 }
