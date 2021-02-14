@@ -1,0 +1,51 @@
+.wrapper__login{
+    display:grid;
+    grid-template-columns: 1fr 0.8fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+.login__panel{
+    /* backdrop-filter: blur(5px); */
+    background-color: rgba(255, 255, 255, 0.486);
+    border-radius: 15px;
+    box-shadow: 0 0 10px 5px rgb(0 0 0 / 20%);
+    display:grid;
+    filter: blur(0.7px);
+    grid-column: 2;
+    grid-row: 2;
+    grid-template-columns: 1fr;
+    height: 30vh;
+    margin: 0 auto;
+    padding: 10px;
+    width: 80%;
+    
+}
+.login{
+    display:grid;
+    grid-column: 2;
+    grid-row: 2;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 1fr;
+    height: 30vh;
+    margin: 0 auto;
+    width: 60%;
+}
+h1{
+    font-family: sans-serif;
+    font-weight: 300;
+}
+input{
+    border:none;
+    margin: 0 auto;
+    padding: 8px;
+    width: 100%;
+}
+textarea:focus, input:focus{
+    outline: none;
+}
+#password{
+    /* min-width: 100%; */
+    padding: 10 20px !important;
+}
+Button{
+    height: 50px;
+}

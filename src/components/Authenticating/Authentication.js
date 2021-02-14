@@ -1,13 +1,13 @@
 import React, { useCallback, useContext } from "react";
 import "./Authentication.css";
-import app from "./base";
+import app from "../base";
 import firebase from "firebase";
 import { withRouter } from "react-router";
 import  { Redirect } from 'react-router-dom'
-import { UserContext } from "./UserContext";
 import {Button, TextField} from "@material-ui/core"
 
 var incorrectMessage = ""
+var user;
 const Login = ({ history }) => {
     const handleLogin = useCallback(
       async event => {
@@ -23,7 +23,7 @@ const Login = ({ history }) => {
                 // ...
               });
               console.log(user);
-          history.push("/");
+          history.push("/home");
         } catch (error) {
           alert(error);
         // incorrectMessage="Incorrect Password!";
@@ -32,12 +32,6 @@ const Login = ({ history }) => {
       [history]
     );
   
-    const currentUser = useContext(UserContext);
-    console.log(currentUser)
-  
-    // if (currentUser) {
-    //   return <Redirect to="/" />;
-    // }
 // time to do some UI magic
 // yes pls
   return (
@@ -51,12 +45,12 @@ const Login = ({ history }) => {
                 </div>
                 <form style={{display:"grid", gridTemplateRows:"1fr 1fr 1fr", width:"80%", margin:"0 auto"}}onSubmit={handleLogin}>
                     <label>
-                    <TextField name="email" type="email" id="email" label="email" color="secondary" size="small" fullWidth variant="outlined"/>
+                    <TextField name="email" type="email" id="email" label="email" size="small" fullWidth variant="outlined"/>
                         {/* <input name="email" type="email" placeholder="Email" /> */}
                     </label>
                     <label>
                         {/* <input name="password" type="password" placeholder="Password" /> */}
-                        <TextField name="password" type="password" id="password" color="secondary" label="Password" helperText={incorrectMessage} size="small" fullWidth variant="outlined"/>
+                        <TextField name="password" type="password" id="password" label="Password" helperText={incorrectMessage} size="small" fullWidth variant="outlined"/>
                     </label>
                     <Button variant="outlined" color="secondary" type="submit">Log in</Button>  
                 </form>
