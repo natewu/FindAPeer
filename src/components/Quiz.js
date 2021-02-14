@@ -4,6 +4,7 @@ import * as Survey from "survey-react";
 // import "survey-react/survey.css";
 import "survey-react/modern.css";
 import "./Quiz.css";
+import {Link} from "react-router-dom"
 
 
 const quiz = () =>{
@@ -207,7 +208,12 @@ function onComplete(survey, options) {
 	// });
 
 
-	return (<Survey.Survey model={survey} onComplete={onComplete}/>);
+	return (
+		<div>
+			<Link to="/">Home</Link>
+			<Survey.Survey model={survey} onComplete={onComplete}/>
+		</div>
+	);
 }
 export default quiz;
 

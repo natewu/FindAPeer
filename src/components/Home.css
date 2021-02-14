@@ -1,5 +1,31 @@
 .content{
     display:grid;
     grid-template-columns: 1fr 0.8fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 5fr 1fr;
+    position: relative;
+    height: 100vh;
+}
+.pairing{
+    background-color: rgba(240, 248, 255, 0.486);
+    grid-column: 2;
+    grid-row: 2;
+    display:grid;
+    grid-template-columns: 0.4fr 1fr 0.4fr;
+    grid-template-rows: 0.5fr 1fr 0.2fr 1fr 0.5fr;
+    height: 80%;
+    margin-top: 5%;
+    border-radius: 10px;
+}
+.Details{
+    grid-column: 2;
+    grid-row: 4;
+    display: grid;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr;
+}
+h2{
+    font-weight: 200;
+}
+h3{
+    font-weight: 200;
+    font-size: 15px;
 }

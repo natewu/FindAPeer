@@ -19,6 +19,7 @@
     "survey-react": "^1.8.30",
     "typeface-roboto": "^1.1.13",
     "typewriter-effect": "^2.17.0",
+    "uuid": "^8.3.2",
     "web-vitals": "^1.1.0"
   },
   "scripts": {
@@ -44,5 +45,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  } 
+  }
 }

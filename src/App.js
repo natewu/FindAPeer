@@ -6,7 +6,8 @@ import PrivateRoute from "./components/routing/PrivateRoute"
 import Login from "./components/Authenticating/Authentication.js";
 import SignUp from "./components/SignUp.js";
 import Quiz from "./components/Quiz.js";
-// import AppChat from "./components/chatEngine"
+import Header from "./components/Header"; 
+import Chat from "./components/Chat"
 
 function App(userState) {
   const userID = userState;
@@ -15,11 +16,15 @@ function App(userState) {
     <div className="App">
       <Router>
         <div className="wrapper">
-        <PrivateRoute exact path="/" component={Home} />
-        <Route exact path="/login" component={Login}/>
-        <Route exact path="/signup" component={SignUp}/>
-        {/* <Route exact path="/chat" component={AppChat}/> */}
-        <PrivateRoute exact path="/quiz" component={Quiz}/>
+          <Header/>
+          <div className="routes">
+            <PrivateRoute exact path="/" component={Home} />
+            <Route exact path="/login" component={Login}/>
+            <Route exact path="/signup" component={SignUp}/>
+            <Route exact path="/chat" component={Chat}/>
+            <PrivateRoute exact path="/quiz" component={Quiz}/>
+          </div>
+       
         </div>
       </Router>
     </div>

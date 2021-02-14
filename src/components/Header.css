@@ -1,0 +1,35 @@
+a{
+    text-decoration: none;
+    color: #f75e6d;
+    font-weight: 300;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+.MuiButton-label{
+    text-decoration: none;
+    color: #f75e6d !important;
+    font-weight: 300;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: rgba(240, 248, 255, 0.486);
+    overflow: hidden;
+    max-width: 60%;
+    margin: 0 auto;
+    /* border-radius: 20px; */
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    height: 50px;
+  }
+  
+  /*  */
+
+  .signOut{
+      color: #F67280 !important;
+  }
+/* Button{
+    padding: 0 100px 0x 100px !important;
+} */
