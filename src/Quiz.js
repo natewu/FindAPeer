@@ -6,27 +6,32 @@ import React, { useState } from 'react';
 AllOpenness = ["I love adventure",
             "I am creative",
             "I love to be challenged",
-            "I am inventive and curious"];
+            "I am inventive and curious",
+            "I am the first to try new activities"];
 
 AllConcient = ["I am highly self-disciplined",
             "I like to know the plan rather than be spontaneous",
             "I am very organized and always come prepared",
-            "I am careful and diligent"];
+            "I am careful and diligent",
+            "I am very efficient at managing my time"];
         
 AllExtro = ["I am outgoing and energetic",
             "I am the life of the party",
             "I am usually the one to start a conversation with someone",
-            "I don’t mind being the center of attention."];
+            "I don’t mind being the center of attention",
+            "I am a very sociable person"];
 
 AllAgree = ["I am friendly and compassionate",
             "I tend to trust people and give them the benefit of the doubt",
             "I like to make other people feel at ease",
-            "I am extremely empathetic"];
+            "I am extremely empathetic",
+            "I tend to be very cooperative"];
 
 AllNuero = ["I tend to be moody", 
             "I stress out easily", 
             "I tend to be more nervous", 
-            "I easily get anxious when things don't go my way"];
+            "I easily get anxious when things don't go my way",
+            "I tend to be depressed if I am alone"];
 
 //This is where we are supposed to randomize them. Think of another way to validate them(no reptitions)
 const min = 0;
