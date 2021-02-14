@@ -39,7 +39,9 @@ const Login = ({ history }) => {
   return (
     <div className="wrapper__login">
         <div className="login__panel">
-            <div className="login" style={{zIndex:10}}>
+            
+        </div>
+        <div className="login" style={{zIndex:10}}>
                 <h1 style={{alignContent:"center"}}>Log in</h1>
                 <form style={{display:"grid", gridTemplateRows:"1fr 1fr 1fr", width:"80%", margin:"0 auto"}}onSubmit={handleLogin}>
                     <label>
@@ -51,7 +53,6 @@ const Login = ({ history }) => {
                     <Button variant="outlined" color="secondary" type="submit">Log in</Button>  
                 </form>
             </div>
-        </div>
     </div>
   );
 };
