@@ -10,8 +10,6 @@ class UserProvider extends Component {
 
   componentDidMount = () => {
     auth.onAuthStateChanged(userAuth => {
-      console.log("AUTH STATE WAS CHANGED! ");
-      console.log(userAuth);
       this.setState({ user: userAuth});          // this hook should just happen automatically
     });
   };

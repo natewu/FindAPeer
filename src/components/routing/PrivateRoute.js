@@ -6,7 +6,6 @@ import auth from '../base'
 
 const PrivateRoute = ({ component: RouteComponent, ...rest }) => {
   var currentUser = useContext(UserContext)
-  console.log(currentUser)
   return (
     <Route
       {...rest}
