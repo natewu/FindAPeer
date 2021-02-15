@@ -13,7 +13,7 @@ var typewriter = new Typewriter(h1, {
 });
  
 typewriter
-  .typeString("Dashboard")
+  .typeString("Matches")
   .pauseFor(5000)
   .start();
 
@@ -22,9 +22,7 @@ function Home() {
     
     return (
         <div className="content">
-            <h1 id="app" style={{gridColumn:2, fontWeight:100, paddingTop: "25px", position:"relative"}}>
-                
-            </h1>
+            <h1 id="app" style={{gridColumn:2, fontWeight:100, paddingTop: "25px", position:"static"}}></h1>
             {/* <button onClick={()=>app.auth().signOut()}>Sign Out</button> */}
             <div className="pairing">
                 <img src="https://cdn.discordapp.com/attachments/396871882139500564/810543746969108530/unknown.png" alt="pfp" style={{maxWidth:"100%", height:"auto", borderRadius: "50%", gridColumn:2, gridRow:2, boxShadow: "0 0 10px 10px rgb(0 0 0 / 15%)"}}/>

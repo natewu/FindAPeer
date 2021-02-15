@@ -3,32 +3,8 @@ import "./Chat.css"
 import Posts from "./Posts";
 import {v4 as uuidv4} from 'uuid';
 import { ChatEngine } from 'react-chat-engine';
-export class Chat extends Component {
-    
-    state = {
-        username: "",
-        text: "",
-        posts: []
-    }
-    post = (text, username) => {
-        const newPost = {
-            id: uuidv4(),
-            username: username,
-            text: text
-        }
-        this.setState({posts: [...this.state.posts, newPost]});
-        console.log(newPost.id);
-    }
-    onSubmit = (e) =>{
-        e.preventDefault();
-        this.post(this.state.text, this.state.username);
-        this.setState({text: "", username: "Ali"});
-    }
-    onChange = (e) => this.setState({text: e.target.value });
-    setUsername = (e) => {
-        this.setState({username: e.target.value});
-    }
-    
+export class Bot extends Component {
+   
     render() {
         return (
             <div className="chat">
@@ -47,7 +23,7 @@ export class Chat extends Component {
                 </form> */}
                 <ChatEngine
                     height='80vh'
-                    userName='Andy'
+                    userName='Bot'
                     userSecret='123123'
                     projectID='d8f29e32-98e9-4bb3-ac89-d64f3592ddf3'
                 />
@@ -56,9 +32,5 @@ export class Chat extends Component {
     }
 }
 var andy = "https://cdn.discordapp.com/attachments/396871882139500564/810543746969108530/unknown.png"
-var username = "https://cdn.discordapp.com/attachments/807075592490057748/810565880081547264/unknown.png"
-var text = [
-    "hello",
-    "whats up"
-]
-export default Chat
+
+export default Bot

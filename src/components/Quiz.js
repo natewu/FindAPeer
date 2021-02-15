@@ -74,7 +74,7 @@ return array;
 
 var json = {
 	"title": "Tell us a little bit about yourself!",
-    "description": "Please take look at the survey title and logo. ",
+    // "description": "Please take look at the survey title and logo. ",
     // "logo": "https://surveyjs.io/favicon.ico",
     "logoWidth": 60,
     "logoHeight": 60,

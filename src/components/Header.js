@@ -14,7 +14,7 @@ import firebase from "firebase/app"
            (<div style={{position:"relative", textDecoration:"none", color:"black", fontWeight:300}} className="topnav">
                 <Button  className="link" color="secondary"><Link to="/">Home</Link></Button>
                 <Button  className="link" color="secondary"><Link to="/Quiz">Quiz</Link></Button>
-                <Button className="signOut" className="link"  color="secondary" onClick={() => {firebase.auth().signOut()}}>Sign Out</Button>
+                <Button className="signOut" color="secondary" onClick={() => {firebase.auth().signOut()}}><Link to="/login">Sign Out</Link></Button>
             </div>)
         ) :
            (

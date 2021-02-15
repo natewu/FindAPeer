@@ -8,6 +8,8 @@ import SignUp from "./components/SignUp.js";
 import Quiz from "./components/Quiz.js";
 import Header from "./components/Header"; 
 import Chat from "./components/Chat"
+import ANDY from "./components/ANDY"
+import BOT from "./components/Bot"
 
 function App(userState) {
   const userID = userState;
@@ -21,7 +23,9 @@ function App(userState) {
             <PrivateRoute exact path="/" component={Home} />
             <Route exact path="/login" component={Login}/>
             <Route exact path="/signup" component={SignUp}/>
-            <Route exact path="/chat" component={Chat}/>
+            <PrivateRoute exact path="/chat" component={Chat}/>
+            <Route exact path="/ali" component={ANDY}/>
+            <Route exact path="/bot" component={BOT}/>
             <PrivateRoute exact path="/quiz" component={Quiz}/>
           </div>
        
